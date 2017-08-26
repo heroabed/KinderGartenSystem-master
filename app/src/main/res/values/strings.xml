@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">KinderGartenSystem</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add">Add</string>
+    <string name="view">View</string>
+    <string name="search">Search</string>
+    <string name="display_all">Display All</string>
+    <array name="myClasses">
+        <item>المرحلة</item>
+        <item>KG0</item>
+        <item>KG1</item>
+        <item>KG2</item>
+    </array>
+    <array name="status">
+        <item>التأهيل العلمي</item>
+        <item>بكالوريوس</item>
+        <item>دبلوم عالي</item>
+        <item>دبلوم متوسط</item>
+        <item>ثانوية عامة</item>
+    </array>
+    <array name="state">
+        <item>الحالة الاجتماعية</item>
+        <item>أعزب</item>
+        <item>متزوج/ة</item>
+        <item>أرمل/ة</item>
+        <item>مطلق/ة</item>
+    </array>
+</resources>

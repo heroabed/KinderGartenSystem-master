@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/kidImg"
+            android:layout_width="220dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            app:srcCompat="@color/colorPrimaryDark"
+            />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kidNameTIET"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:hint="اسم الطفل رباعيا"
+                android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/kidDateLayout"
+            android:layout_alignEnd="@id/kidNameTIET"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp">
+            <Spinner
+                android:layout_width="0dp"
+                android:entries="@array/myClasses"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kidDateLayout"
+                android:layout_weight="2"
+                />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".6">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kidBDdayTIET"
+                    android:hint="DD"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kidBDmonthTIET"
+                android:hint="MM"
+                android:inputType="number"
+                android:maxLength="2"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kidBDyearTIET"
+                android:hint="YYYY"
+                android:inputType="number"
+                android:maxLength="4"
+                />
+            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="تاريخ الميلاد : "
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_weight="1.5"
+
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:hint="البلدة الأصلية"
+                android:id="@+id/oldCityTIET"
+                android:maxLength="15"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kidIdTIET"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:hint="رقم هوية الطفل"
+                android:layout_marginStart="4dp"
+                android:maxLength="9"
+                />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                >
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="المؤهل العلمي للأب"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:id="@+id/kidFatherColgTIET"
+                android:maxLength="15"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="مهنة الأب"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:layout_marginStart="4dp"
+                android:id="@+id/kidFatherJobTIET"
+                android:maxLength="15"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="رقم هوية الأب"
+                android:inputType="number"
+                android:layout_marginStart="4dp"
+                android:id="@+id/kidFatherIdTIET"
+                android:maxLength="9"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="المؤهل العلمي للأم"
+                android:id="@+id/kidMotherColgTIET"
+                android:inputType="text"
+                android:maxLength="15"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="مهنة الأم"
+                android:layout_marginStart="4dp"
+                android:id="@+id/kidMotherJobTIET"
+                android:inputType="text"
+                android:maxLength="9"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="fill"
+                android:hint="ترتيب الطفل في الأسرة"
+                android:layout_marginStart="4dp"
+                android:id="@+id/kidFamilyRankTIET"
+                android:inputType="number"
+                android:maxLength="2"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="عدد أفراد الأسرة"
+                android:layout_marginStart="4dp"
+                android:id="@+id/kidFamilyNoTIET"
+                android:inputType="number"
+                android:maxLength="2"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="العنوان كاملا"
+            android:id="@+id/kidAddressTIET"
+            android:inputType="text"
+            android:singleLine="true"
+            />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kidHomePhoneTIET"
+                android:hint="الهاتف"
+                android:layout_marginEnd="4dp"
+                android:inputType="number"
+                android:maxLength="7"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kidFatherMobileTIET"
+                android:hint="جوال الأب"
+                android:maxLength="7"
+                android:layout_marginEnd="4dp"
+                android:inputType="number"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kidMotherMobileTIET"
+                android:hint="جوال الأم"
+                android:maxLength="7"
+                android:inputType="number"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/gray"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="أسئلة تتعلق بالطفل : "
+                android:textColor="@color/Red"
+                android:padding="4dp"
+                android:textSize="20sp"
+                android:fontFamily="casual"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="هل الطفل : "
+                android:textSize="16sp"
+                android:textColor="@color/Darkblue"/>
+
+            <CheckBox
+                android:id="@+id/kidQuestion1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="التحق بروضة من قبل"
+                />
+            <CheckBox
+                android:id="@+id/kidQuestion2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="يعاني من اي مشاكل صحية"
+                />
+            <CheckBox
+                android:id="@+id/kidQuestion3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="يستخدم اليد اليمنى"
+                />
+            <CheckBox
+                android:id="@+id/kidQuestion4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="يستخدم اليد اليسرى"
+                />
+            <CheckBox
+                android:id="@+id/kidQuestion5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="يحتاج لأخصائي نطق وتخاطب"
+                />
+            <CheckBox
+                android:id="@+id/kidQuestion6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="أتم فحص النظر والسمع من قبل"
+                />
+            <CheckBox
+                android:id="@+id/kidQuestion7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" يشارك ألعابه مع أصدقائه أو إخوته"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".6">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kidQuestion8TIET"
+                    android:hint="كم ساعة يجلس الطفل على التلفاز"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    android:maxLength="2"/>
+                </android.support.design.widget.TextInputLayout>
+
+             <android.support.design.widget.TextInputLayout
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight=".4">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kidQuestion9TIET"
+                android:maxLength="2"
+                android:hint="ينام الطفل الساعة"
+                android:layout_marginStart="4dp"
+                android:inputType="text"/>
+             </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:id="@+id/kidBusChoice"
+                    android:gravity="center">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/kidBusYes"
+                        android:text="لا"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="4dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/kidBusNo"
+                        android:text="نعم"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="مواصلات   :     "
+                    android:textSize="20sp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:id="@+id/kidStudPeriChoice"
+                    android:gravity="center">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/kidStudPeriMo"
+                        android:text="مسائي"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="4dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/kidStudPeriEv"
+                        android:text="صباحي"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="الفترة الدراسية   :     "
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
